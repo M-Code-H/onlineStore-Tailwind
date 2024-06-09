@@ -965,6 +965,34 @@ select option{
     width: 50%;
    
   }
+  
 
   
+}
+
+@media (min-width:600px) and (max-width:850px) {
+  .section-item{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  .contant-forms{
+    width: 55%;
+  }
+  .contant-img{
+    width: 70%;
+  }
+}
+@media (min-width:100px) and (max-width:599px) {
+  .section-item{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .contant-forms{
+    width: 68%;
+  }
+  .contant-img{
+    width: 65%;
+  }
 }
