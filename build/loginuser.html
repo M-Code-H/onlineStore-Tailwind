@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="../node_modules/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <header class="header w-wFull h-fit relative">
+        <div class="navbarfixed w-wFull h-90px overflow-hidden">
+          <nav
+            class="z-50 w-wFull flex justify-around items-center py-6 px-6 bg-col3"
+          >
+            <div class="logo w-60 font-semibold text-4xl font-serif">
+              <h1 class="text-shadow-sm shadow-indigo-500/50">
+              <a href="index.html"> Angle</a>
+              </h1>
+            </div>
+            <div class="search">
+              <form action="" class="relative" method="get">
+                <div
+                  id="divInputSearch"
+                  class="item-search items-center flex relative rounded-xl bg-c1"
+                >
+                  <label for="inputSearch" class="absolute right-2 top-1"
+                    ><i class="bx bx-search text-2xl font-semibold text-c4"></i
+                  ></label>
+                  <input
+                    type="text"
+                    name="Search"
+                    id="inputSearch"
+                    class="w-wFull outline-none pr-9 h-9 bg-tra font-medium text-c3"
+                  />
+                  <button
+                    type="submit"
+                    class="w-w100 h-full py-1 text-lg bg-black rounded-bl-xl rounded-tl-xl text-white text-center"
+                  >
+                    بحث
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div
+              class="icons w-w150 h-fit flex justify-between items-center transition"
+            >
+              <i
+                id="iconSearch"
+                class="bx bx-search icon-Sh p-1 bg-c4 rounded-full text-white cursor-pointer hidden"
+              ></i>
+
+           <a href="loginuser.html">
+            <i
+            id="iconUser"
+            class="bx bxs-user text-2xl login-user text-c4 hover:text-black"
+          ></i>
+           </a>
+              <a href=""
+                ><i class="bx bxs-heart text-2xl text-c4 hover:text-red"></i
+              ></a>
+              <a href="Basket.html" class="relative flex items-center bg-c4 rounded-md"
+                ><i
+                  class="bx bxs-shopping-bag text-2xl text-col3 hover:text-black"
+                ></i>
+                <span
+                  class="numProducts absolutebg-c4 rounded-full text-col3"
+                  style="padding: 0px 4px; left: px; font-weight: 600"
+                  >0</span
+                >
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <div class="content-ul w-w75% m-auto py-2 items-center">
+          <ul class="w-w50% m-auto flex" id="ul">
+            <li
+              class="flex gap-2 items-center hover:border-b-2 border-black hover:text-c4 text-c3 w-w100"
+            >
+              <a href="index.html" class="ml-1 ">تخفيضات</a>
+            </li>
+            <li
+              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
+            >
+              <a href="index.html" class="px-2 ">ملابس</a>
+              <i class="bx bx-chevron-down text-xl"></i>
+              <ul
+                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+                id="ulshow"
+              >
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">ملابس شتوية</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">ملابس صيفية</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
+            >
+              <a href="index.html" class=" ">الأحذية</a>
+              <i class="bx bx-chevron-down text-xl"></i>
+              <ul
+                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+                id="ulshow"
+              >
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
+            >
+              <a href="index.html" class=" ">الحقائب</a>
+              <i class="bx bx-chevron-down text-xl"></i>
+              <ul
+                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+                id="ulshow"
+              >
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
+            >
+              <a href="index.html" class=" ">اكسسوارات</a>
+              <i class="bx bx-chevron-down text-xl"></i>
+              <ul
+                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+                id="ulshow"
+              >
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
+            >
+              <a href="index.html" class=" ">تجميل</a>
+              <i class="bx bx-chevron-down text-xl"></i>
+              <ul
+                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+                id="ulshow"
+              >
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" "> تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+                <li
+                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
+                >
+                  <a href="" class=" ">تخفيضات</a>
+                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="section-item w-wFull flex justify-around items-center">
+        <div class="contant-forms relative w-w30% h-450px overflow-hidden">
+          <div
+            class="login w-wFull absolute h-full pt-5 gap-4 flex flex-col items-center justify-center bg-white"
+            id="login"
+          >
+            <h1 class="font-font-600 pt-3 text-xl text-c4">تسجيل الدخول</h1>
+            <span id="errorLo" class="text-xs text-red"></span>
+            <form
+              id="formss"
+              onsubmit="return foLValidate()"
+              action="index.html"
+              class="w-wFull pt-2 h-65% flex flex-col items-center gap-6"
+            >
+              <input
+                type="text"
+                placeholder="بريد الاكتروني"
+                id="loEmail"
+                class="email w-w80% pr-2 h-40px bg-white border outline-none border-solid text-c4 font-font-600 border-col1 rounded-xl"
+              />
+              <input
+                type="password"
+                placeholder=" كلمة المرور"
+                id="loPass"
+                class="email w-w80% font-font-600 h-40px bg-white border rounded-xl pr-2 outline-none text-c4 border-solid border-col1"
+              />
+              <a href="#" class="text-sm text-c4 underline"
+                >هل نسيت كلمة مرور</a
+              >
+              <button
+                type="submit"
+                class="bg-c4 py-2 px-4 rounded-xl text-white"
+              >
+                تسجيل الدخول
+              </button>
+            </form>
+            <button
+              id="btnLog"
+              onclick="clickShowSingUp()"
+              class="text-base font-font-600 text-c4 underline"
+            >
+              حساب جديد
+            </button>
+          </div>
+
+          <div
+            id="singUp"
+            class="singUp h-full pt-4 gap-3 flex flex-col items-center justify-center bg-white absolute z-50"
+          >
+            <h1 class="font-font-600 pt-2 text-xl text-c4">انشاء حساب</h1>
+            <span id="errorSU" class="text-xs text-red"></span>
+
+            <form action="index.html" method="post"
+              class="w-wFull h-fit flex flex-col items-center gap-4"
+              onsubmit="return foSValidate()"
+            >
+              <input
+                type="text"
+                placeholder="الأسم الكريم"
+                name="name"
+                id="sUName"
+                class="inpName w-w80% pr-2 h-40px border outline-none bg-white border-solid text-c4 font-font-600 border-col1 rounded-xl"
+              />
+              <input
+                type="text"
+                placeholder="بريد الاكتروني"
+                name="email"
+                id="sUEmail"
+                class="inpName w-w80% pr-2 h-40px border outline-none bg-white border-solid text-c4 font-font-600 border-col1 rounded-xl"
+              />
+              <input
+                type="text"
+                placeholder="رقم الهاتف"
+                name="phone"
+                id="sUPhone"
+                class="inpName w-w80% pr-2 h-40px border outline-none bg-white border-solid text-c4 font-font-600 border-col1 rounded-xl"
+              />
+              <input
+                type="password"
+                placeholder="كلمة المرور"
+                name="password"
+                id="sUPass"
+                class="inpName w-w80% pr-2 h-40px border outline-none bg-white border-solid text-c4 font-font-600 border-col1 rounded-xl"
+                required-message="nooooooo"
+              />
+              <div class="w-w80% pr-2">
+                <input type="checkbox" name="MyCheckbox" id="sUCheckbox" />
+                <label for="" class="text-xs"
+                  >لقد قمت بقراءة وفهم شروط وقواعد استخدام
+                </label>
+                <button
+                  type="submit"
+                  class="bg-c4 m-auto block mt-1 py-2 px-4 rounded-xl text-white"
+                >
+                  تسجيل الدخول
+                </button>
+              </div>
+            </form>
+            <button
+              id="btnSin"
+              onclick="clickShowSingIn()"
+              class="text-base font-font-600 text-c4 underline"
+            >
+              لدي حساب
+            </button>
+          </div>
+        </div>
+
+        <div class="contant-img w-w50% h-full">
+          <img
+            src="images/coworking-young-woman-doing-online-shopping.gif"
+            class="w-w80%"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <script src="../node_modules/keen-slider/keen-slider.js"></script>
+
+      <script src="../node_modules/swiper/swiper.min.js"></script>
+
+      <script src="scripts/sliderSWP.js"></script>
+
+      <script src="../node_modules/boxicons/dist/boxicons.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+    </main>
+  </body>
+</html>

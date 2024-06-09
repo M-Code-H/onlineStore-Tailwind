@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "scripts": {
+    "Build-Css": "tailwindcss -i ./src/input.css -o ./build/output.css --watch"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "bootstrap": "^5.3.3",
+    "boxicons": "^2.1.4",
+    "glider-autoplay": "^1.1.1",
+    "jquery": "^3.7.1",
+    "keen-slider": "^6.8.6",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.3"
+  }
+}
