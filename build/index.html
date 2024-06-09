@@ -1,377 +1,424 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-    <!-- <link
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- <link
       rel="stylesheet"
       href="../node_modules/keen-slider/keen-slider.min.css"
     /> -->
-    <link href="
+  <link href="
 https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
 " rel="stylesheet">
-    <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="output.css" />
 
-    <title>Document</title>
-  </head>
-  <body class="bg-body relative">
-    <section class="sectionAll relative">
-      <header class="header w-wFull h-fit relative">
-        <div class="navbarfixed w-wFull h-90px overflow-hidden">
-          <nav
-            class="z-50 w-wFull flex justify-around items-center py-6 px-6 bg-col3"
-          >
-            <div class="logo w-60 font-semibold text-4xl font-serif">
-              <h1 class="text-shadow-sm shadow-indigo-500/50">
+  <title>Document</title>
+</head>
+
+<body class="bg-body relative">
+  <section class="sectionAll relative">
+    <header class="header w-wFull h-fit relative">
+      <div class="navbarfixed w-wFull h-90px overflow-hidden">
+        <nav class="z-50 w-wFull flex justify-around items-center py-6 px-6 bg-col3">
+          <div class="logo w-60 font-semibold text-4xl font-serif">
+            <h1 class="text-shadow-sm shadow-indigo-500/50">
               <a href="index.html"> Angle</a>
-              </h1>
-            </div>
-            <div class="search">
-              <form action="" class="relative" method="get">
-                <div
-                  id="divInputSearch"
-                  class="item-search items-center flex relative rounded-xl bg-c1"
-                >
-                  <label for="inputSearch" class="absolute right-2 top-1"
-                    ><i class="bx bx-search text-2xl font-semibold text-c4"></i
-                  ></label>
-                  <input
-                    type="text"
-                    name="Search"
-                    id="inputSearch"
-                    class="w-wFull outline-none pr-9 h-9 bg-tra font-medium text-c3"
-                  />
-                  <button
-                    type="submit"
-                    class="w-w100 h-full py-1 text-lg bg-black rounded-bl-xl rounded-tl-xl text-white text-center"
-                  >
-                    بحث
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div
-              class="icons w-w150 h-fit flex justify-between items-center transition"
-            >
-              <i
-                id="iconSearch"
-                class="bx bx-search icon-Sh p-1 bg-c4 rounded-full text-white cursor-pointer hidden"
-              ></i>
+            </h1>
+          </div>
+          <div class="search">
+            <form action="" class="relative" method="get">
+              <div id="divInputSearch" class="item-search items-center flex relative rounded-xl bg-c1">
+                <label for="inputSearch" class="absolute right-2 top-1"><i
+                    class="bx bx-search text-2xl font-semibold text-c4"></i></label>
+                <input type="text" name="Search" id="inputSearch"
+                  class="w-wFull outline-none pr-9 h-9 bg-tra font-medium text-c3" />
+                <button type="submit"
+                  class="w-w100 h-full py-1 text-lg bg-black rounded-bl-xl rounded-tl-xl text-white text-center">
+                  بحث
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="icons w-w150 h-fit flex justify-between items-center transition">
+            <i id="iconSearch" class="bx bx-search icon-Sh p-1 bg-c4 rounded-full text-white cursor-pointer hidden"></i>
 
-           <a href="loginuser.html">
-            <i
-            id="iconUser"
-            class="bx bxs-user text-2xl login-user text-c4 hover:text-black"
-          ></i>
-           </a>
-              <a href=""
-                ><i class="bx bxs-heart text-2xl text-c4 hover:text-red"></i
-              ></a>
-              <a href="Basket.html" class="relative flex items-center bg-c4 rounded-md"
-                ><i
-                  class="bx bxs-shopping-bag text-2xl text-col3 hover:text-black"
-                ></i>
-                <span
-                  class="numProducts absolutebg-c4 rounded-full text-col3"
-                  style="padding: 0px 4px; left: px; font-weight: 600"
-                  >0</span
-                >
+            <a href="loginuser.html">
+              <i id="iconUser" class="bx bxs-user text-2xl login-user text-c4 hover:text-black"></i>
+            </a>
+            <a href=""><i class="bx bxs-heart text-2xl text-c4 hover:text-red"></i></a>
+            <a href="Basket.html" class="relative flex items-center bg-c4 rounded-md"><i
+                class="bx bxs-shopping-bag text-2xl text-col3 hover:text-black"></i>
+              <span class="numProducts absolutebg-c4 rounded-full text-col3"
+                style="padding: 0px 4px; left: px; font-weight: 600">0</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="content-ul w-w75% m-auto py-2 items-center">
+        <ul class="w-w50% m-auto flex" id="ul">
+          <li class="flex gap-2 items-center hover:border-b-2 border-black hover:text-c4 text-c3 w-w100">
+            <a href="index.html" class="ml-1 ">تخفيضات</a>
+          </li>
+          <li
+            class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center">
+            <a href="index.html" class="px-2 ">ملابس</a>
+            <i class="bx bx-chevron-down text-xl"></i>
+            <ul class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+              id="ulshow">
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">ملابس شتوية</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">ملابس صيفية</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center">
+            <a href="index.html" class=" ">الأحذية</a>
+            <i class="bx bx-chevron-down text-xl"></i>
+            <ul class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+              id="ulshow">
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center">
+            <a href="index.html" class=" ">الحقائب</a>
+            <i class="bx bx-chevron-down text-xl"></i>
+            <ul class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+              id="ulshow">
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center">
+            <a href="index.html" class=" ">اكسسوارات</a>
+            <i class="bx bx-chevron-down text-xl"></i>
+            <ul class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+              id="ulshow">
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center">
+            <a href="index.html" class=" ">تجميل</a>
+            <i class="bx bx-chevron-down text-xl"></i>
+            <ul class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
+              id="ulshow">
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" "> تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+              <li
+                class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative">
+                <a href="" class=" ">تخفيضات</a>
+                <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- slider Swpier images Home Start -->
+
+    <div class="contentSlider">
+      <div class="slider relative h-fit w-wFull z">
+        <div class="slide w-wFull h-full overflow-hidden relative justify-center hidden">
+          <img class="w-w95% h-95%" src="images/bxfxXhVUOoAnbO7c3Zxm6lr5YQBNR9suZM3GL3Uh.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="slide w-wFull h-full overflow-hidden relative justify-center hidden">
+          <img class="w-w95% h-95%" src="images/J9gMWvVK023RCaM3QqPZcMUTC6aOKW1vgQA5Ywmm.jpg" alt="" loading="lazy" />
+        </div>
+      </div>
+      <div class="dots flex w-w100 m-auto">
+        <div onclick="dotsSlider(-1)" class="dot py-1 px-1 rounded-3xl bg-c6 m-2 border-2 border-c4"></div>
+        <div onclick="dotsSlider(1)" class="dot py-1 px-1 rounded-3xl bg-c6 m-2 border-2 border-c4"></div>
+      </div>
+    </div>
+
+    <!-- slider Swpier images Home Start -->
+
+    <!-- slider Swpier product home start -->
+
+    <div class="mySwiper">
+      <div class="item-SwpierSli">
+        <div class="titleSli">
+          <h3>جديدنا</h3>
+          <div class="hr"></div>
+        </div>
+
+        <div class="clickPrevNext">
+          <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+        </div>
+
+        <div class="prAll">
+          <a class="Addproducts text-white text-xs" href="">عرض الكل</a>
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
               </a>
             </div>
-          </nav>
-        </div>
-
-        <div class="content-ul w-w75% m-auto py-2 items-center">
-          <ul class="w-w50% m-auto flex" id="ul">
-            <li
-              class="flex gap-2 items-center hover:border-b-2 border-black hover:text-c4 text-c3 w-w100"
-            >
-              <a href="index.html" class="ml-1 ">تخفيضات</a>
-            </li>
-            <li
-              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
-            >
-              <a href="index.html" class="px-2 ">ملابس</a>
-              <i class="bx bx-chevron-down text-xl"></i>
-              <ul
-                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
-                id="ulshow"
-              >
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">ملابس شتوية</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">ملابس صيفية</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
-            >
-              <a href="index.html" class=" ">الأحذية</a>
-              <i class="bx bx-chevron-down text-xl"></i>
-              <ul
-                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
-                id="ulshow"
-              >
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
-            >
-              <a href="index.html" class=" ">الحقائب</a>
-              <i class="bx bx-chevron-down text-xl"></i>
-              <ul
-                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
-                id="ulshow"
-              >
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
-            >
-              <a href="index.html" class=" ">اكسسوارات</a>
-              <i class="bx bx-chevron-down text-xl"></i>
-              <ul
-                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
-                id="ulshow"
-              >
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="flex hover:border-b-2 border-black cursor-pointer relative w-w100 text-center h-9 gap-2 items-center"
-            >
-              <a href="index.html" class=" ">تجميل</a>
-              <i class="bx bx-chevron-down text-xl"></i>
-              <ul
-                class="rounded-md z-50 duration-200 w-w-fit overflow-hidden h-0 bg-rm top-6 right-0 absolute"
-                id="ulshow"
-              >
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" "> تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-                <li
-                  class="flex text-c4 w-w150 h-11 cursor-pointer justify-around items-center hover:text-rm hover:bg-c4 hover:border-b-4 border-black duration-200 relative"
-                >
-                  <a href="" class=" ">تخفيضات</a>
-                  <i class="bx bx-chevrons-left cursor-pointer text-xl"></i>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </header>
-
-      <!-- slider Swpier images Home Start -->
-
-      <div class="contentSlider">
-        <div class="slider relative h-fit w-wFull z">
-          <div
-            class="slide w-wFull h-full overflow-hidden relative justify-center hidden"
-          >
-            <img
-              class="w-w95% h-95%"
-              src="images/bxfxXhVUOoAnbO7c3Zxm6lr5YQBNR9suZM3GL3Uh.jpg"
-              alt="" loading="lazy"
-            />
-          </div>
-          <div
-            class="slide w-wFull h-full overflow-hidden relative justify-center hidden"
-          >
-            <img
-              class="w-w95% h-95%"
-              src="images/J9gMWvVK023RCaM3QqPZcMUTC6aOKW1vgQA5Ywmm.jpg"
-              alt="" loading="lazy"
-            />
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
           </div>
         </div>
-        <div class="dots flex w-w100 m-auto">
-          <div
-            onclick="dotsSlider(-1)"
-            class="dot py-1 px-1 rounded-3xl bg-c6 m-2 border-2 border-c4"
-          ></div>
-          <div
-            onclick="dotsSlider(1)"
-            class="dot py-1 px-1 rounded-3xl bg-c6 m-2 border-2 border-c4"
-          ></div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- slider Swpier images Home Start -->
+    <!-- slider Swpier product home end -->
 
-      <!-- slider Swpier product home start -->
+    <!-- bg ad and 1 start -->
+    <div class="items-ad h-full m-auto pt-10 items-center w-wFull flex">
+      <img src="images/bg.webp" class="img-ad w-w95% h-60% m-auto" alt="" loading="lazy" />
+    </div>
+    <!-- bg ad and 1 end -->
+    <!-- container slider Swpier Products start -->
+
+    <div class="sliderSwpier-AllContainer">
+      <!-- section and 1 start -->
 
       <div class="mySwiper">
         <div class="item-SwpierSli">
@@ -381,1409 +428,8 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
           </div>
 
           <div class="clickPrevNext">
-            <i
-              class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-            ></i>
-            <i
-              class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-            ></i>
-          </div>
-
-          <div class="prAll">
-            <a class="Addproducts text-white text-xs" href="">عرض الكل</a>
-          </div>
-        </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
-              <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
-              </div>
-              <div class="pricePr">45322ل.س</div>
-              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                <button class="w-wFull h-full font-font-600 text-white">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <a  href="pageProducts.html" 
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
-              <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
-              </div>
-              <div class="pricePr">45322ل.س</div>
-              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                <button class="w-wFull h-full font-font-600 text-white">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
-              <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
-              </div>
-              <div class="pricePr">45322ل.س</div>
-              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                <button class="w-wFull h-full font-font-600 text-white">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
-              <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
-              </div>
-              <div class="pricePr">45322ل.س</div>
-              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                <button class="w-wFull h-full font-font-600 text-white">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
-              <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
-              </div>
-              <div class="pricePr">45322ل.س</div>
-              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                <button class="w-wFull h-full font-font-600 text-white">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
-              <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
-              </div>
-              <div class="pricePr">45322ل.س</div>
-              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                <button class="w-wFull h-full font-font-600 text-white">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- slider Swpier product home end -->
-
-      <!-- bg ad and 1 start -->
-      <div class="items-ad h-full m-auto pt-10 items-center w-wFull flex">
-        <img src="images/bg.webp" class="img-ad w-w95% h-60% m-auto" alt="" loading="lazy" />
-      </div>
-      <!-- bg ad and 1 end -->
-      <!-- container slider Swpier Products start -->
-
-      <div class="sliderSwpier-AllContainer">
-        <!-- section and 1 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 1 End -->
-
-        <!-- section and 2 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 2 End -->
-
-        <!-- section and 3 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 3 End -->
-
-        <!-- section and 4 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 4 End -->
-
-        <!-- section and 5 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 5 End -->
-
-        <!-- section and 6 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 6 End -->
-        <!-- section and 7 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 7 End -->
-
-        <!-- section and 8 start -->
-
-        <div class="mySwiper">
-          <div class="item-SwpierSli">
-            <div class="titleSli">
-              <h3>جديدنا</h3>
-              <div class="hr"></div>
-            </div>
-
-            <div class="clickPrevNext">
-              <i
-                class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-              <i
-                class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-              ></i>
-            </div>
-
-            <div class="prAll">
-              <a class="text-white text-xs" href="">عرض الكل</a>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <a href="pageProducts.html"
-                ><div class="imgPr">
-                  <img src="images/product.webp" alt="" loading="lazy" /></div
-              ></a>
-              <div
-                class="itwmPr flex flex-col justify-around h-130px items-center"
-              >
-                <div class="namePr">
-                  <a href=""
-                    ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                  >
-                </div>
-                <div class="pricePr">45322ل.س</div>
-                <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
-                  <button class="w-wFull h-full font-font-600 text-white">
-                    أضف للسلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- section and 8 End -->
-      </div>
-      <!-- container slider Swpier Products end -->
-
-      <!-- bg ad and 2 start -->
-
-      <div class="items-ad h-full m-auto pt-16 items-center w-wFull flex">
-        <img src="images/bg2.webp" class="img-ad w-w95% h-60% m-auto" alt="" loading="lazy" />
-      </div>
-
-      <!-- bg ad and 2 end -->
-
-      <!-- slider Swpier product End home start -->
-
-      <div class="mySwiper">
-        <div class="item-SwpierSli">
-          <div class="titleSli">
-            <h3>جديدنا</h3>
-            <div class="hr"></div>
-          </div>
-
-          <div class="clickPrevNext">
-            <i
-              class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-            ></i>
-            <i
-              class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"
-            ></i>
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
           </div>
 
           <div class="prAll">
@@ -1792,16 +438,16 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
         </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
               <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
               <div class="pricePr">45322ل.س</div>
               <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
@@ -1812,16 +458,16 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
             </div>
           </div>
           <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
               <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
               <div class="pricePr">45322ل.س</div>
               <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
@@ -1832,16 +478,16 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
             </div>
           </div>
           <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
               <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
               <div class="pricePr">45322ل.س</div>
               <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
@@ -1852,16 +498,16 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
             </div>
           </div>
           <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
               <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
               <div class="pricePr">45322ل.س</div>
               <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
@@ -1872,16 +518,16 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
             </div>
           </div>
           <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
               <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
               <div class="pricePr">45322ل.س</div>
               <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
@@ -1892,16 +538,16 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
             </div>
           </div>
           <div class="swiper-slide">
-            <a href="pageProducts.html"
-              ><div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div
-            ></a>
-            <div
-              class="itwmPr flex flex-col justify-around h-130px items-center"
-            >
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
               <div class="namePr">
-                <a href="pageProducts.html"
-                  ><h4 class="text-c4 text-base font-font-600">قميص</h4></a
-                >
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
               <div class="pricePr">45322ل.س</div>
               <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
@@ -1914,399 +560,1494 @@ https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.css
         </div>
       </div>
 
-      <!-- slider Swpier product End home end -->
+      <!-- section and 1 End -->
 
-      <!-- Box features Elements start -->
-      <br />
-      <br />
-      <br />
-      <div class="content-features w-wFull h-fit p-3">
-        <div
-          class="boxfeatures w-w85% h-fit flex flex-wrap justify-center m-auto gap-y-3 p-4"
-        >
-          <div
-            class="feature-item basis-300px flex flex-col items-center gap-y-3 flex-grow p-2"
-          >
-            <div
-              class="feature-icon w-w100 h-100px rounded-full bg-c4 flex items-center justify-center"
-            >
-              <img
-                src="../icons/icons8-truck-64.png"
-                class="w-w60 h-60px"
+      <!-- section and 2 start -->
 
-                alt="" loading="lazy"
-              />
-            </div>
+      <div class="mySwiper">
+        <div class="item-SwpierSli">
+          <div class="titleSli">
+            <h3>جديدنا</h3>
+            <div class="hr"></div>
+          </div>
 
-            <div class="feature-text text-center">
-              <h3 class="text-xs font-font-600 pb-2">شحن سريع</h3>
-              <p class="text-xs font-font-600">
-                بكل الحب نشحن إلى جميع مناطق سوريا
-              </p>
+          <div class="clickPrevNext">
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          </div>
+
+          <div class="prAll">
+            <a class="text-white text-xs" href="">عرض الكل</a>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
             </div>
           </div>
-          <div
-            class="feature-item basis-300px flex flex-col items-center gap-y-3 flex-grow p-2"
-          >
-            <div
-              class="feature-icon w-w100 h-100px rounded-full bg-c4 flex items-center justify-center"
-            >
-              <img
-                src="../icons/icons8-wallet-64.png"
-                class="w-w60 h-60px"
-                alt="" loading="lazy"
-              />
-            </div>
-
-            <div class="feature-text text-center">
-              <h3 class="text-xs font-font-600 pb-2">طرق دفع متنوعة وأمنة</h3>
-              <p class="text-xs font-font-600">
-                وفرنا كل وسائل دفع الآمنة لضمان راحتك
-              </p>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
             </div>
           </div>
-          <div
-            class="feature-item basis-300px flex flex-col items-center gap-y-3 flex-grow p-2"
-          >
-            <div
-              class="feature-icon w-w100 h-100px rounded-full bg-c4 flex items-center justify-center"
-            >
-              <img
-                src="../icons/icons8-whatsapp-50.png"
-                class="w-w60 h-60px"
-                alt="" loading="lazy"
-              />
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
             </div>
-
-            <div class="feature-text text-center">
-              <h3 class="text-xs font-font-600 pb-2">خدمة العملاء</h3>
-              <p class="text-xs font-font-600">واتساب مخصص لخدمة العملاء</p>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Box features Elements end -->
-      <section class="section-slider-keen">
-        <div id="my-keen-slider" class="keen-slider">
-          <div class="keen-slider__slide number-slide1">
-            <div class="card-1">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
+      <!-- section and 2 End -->
+
+      <!-- section and 3 start -->
+
+      <div class="mySwiper">
+        <div class="item-SwpierSli">
+          <div class="titleSli">
+            <h3>جديدنا</h3>
+            <div class="hr"></div>
+          </div>
+
+          <div class="clickPrevNext">
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          </div>
+
+          <div class="prAll">
+            <a class="text-white text-xs" href="">عرض الكل</a>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
               </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
-            </div>
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
-              </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
               </div>
             </div>
           </div>
-          <div class="keen-slider__slide number-slide1">
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
               </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
-            </div>
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
-              </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
               </div>
             </div>
           </div>
-          <div class="keen-slider__slide number-slide1">
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
               </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
-            </div>
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
-              </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
               </div>
             </div>
           </div>
-          <div class="keen-slider__slide number-slide1">
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
               </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
               </div>
-            </div>
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
-              </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
               </div>
             </div>
           </div>
-          <div class="keen-slider__slide number-slide1">
-            <div class="card">
-              <div class="item-card">
-                <p>
-                  ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
-                  elit. Rem excepturi
-                </p>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
               </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
               </div>
             </div>
-            <div class="card">
-              <div class="item-card">
-                <p>ohuigyftdr Lorem ipsum dolor sit amet</p>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
               </div>
-              <div class="item-card-information">
-                <div class="img-profile">
-                  <img src="images/avatar_male.png" alt="" loading="lazy" />
-                </div>
-                <div class="item-name">
-                  <p>
-                    mohamed <br />
-                    <span>دمشق</span>
-                  </p>
-                </div>
-                <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <div class="container-footer w-wFull py-8 h-fit bg-footer">
-        <footer
-          style="justify-content: space-evenly"
-          class="footer w-w85% flex flex-wrap gap-10"
-        >
-          <div class="item-footer w-w400 text-sm font-font-600">
-            <h4 class="block text-sm w-w-fit font-font-700 border-b-2 pb-2">
-              من نحن
-            </h4>
-            <br />
-            <p>
-              دور الأناقة هو أفضل موقع وسيط لبيع الملابس النسائية والأزياء بسعر
-              منخفض ، حيث يقدم بلايز فاخرة وملابس فاخرة وغير ذلك الكثير ، قوموا
-              بزيارة موقعنا على الإنترنت !!
+      </div>
+
+      <!-- section and 3 End -->
+
+      <!-- section and 4 start -->
+
+      <div class="mySwiper">
+        <div class="item-SwpierSli">
+          <div class="titleSli">
+            <h3>جديدنا</h3>
+            <div class="hr"></div>
+          </div>
+
+          <div class="clickPrevNext">
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          </div>
+
+          <div class="prAll">
+            <a class="text-white text-xs" href="">عرض الكل</a>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section and 4 End -->
+
+      <!-- section and 5 start -->
+
+      <div class="mySwiper">
+        <div class="item-SwpierSli">
+          <div class="titleSli">
+            <h3>جديدنا</h3>
+            <div class="hr"></div>
+          </div>
+
+          <div class="clickPrevNext">
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          </div>
+
+          <div class="prAll">
+            <a class="text-white text-xs" href="">عرض الكل</a>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section and 5 End -->
+
+      <!-- section and 6 start -->
+
+      <div class="mySwiper">
+        <div class="item-SwpierSli">
+          <div class="titleSli">
+            <h3>جديدنا</h3>
+            <div class="hr"></div>
+          </div>
+
+          <div class="clickPrevNext">
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          </div>
+
+          <div class="prAll">
+            <a class="text-white text-xs" href="">عرض الكل</a>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section and 6 End -->
+      <!-- section and 7 start -->
+
+      <div class="mySwiper">
+        <div class="item-SwpierSli">
+          <div class="titleSli">
+            <h3>جديدنا</h3>
+            <div class="hr"></div>
+          </div>
+
+          <div class="clickPrevNext">
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          </div>
+
+          <div class="prAll">
+            <a class="text-white text-xs" href="">عرض الكل</a>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section and 7 End -->
+
+      <!-- section and 8 start -->
+
+      <div class="mySwiper">
+        <div class="item-SwpierSli">
+          <div class="titleSli">
+            <h3>جديدنا</h3>
+            <div class="hr"></div>
+          </div>
+
+          <div class="clickPrevNext">
+            <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+            <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          </div>
+
+          <div class="prAll">
+            <a class="text-white text-xs" href="">عرض الكل</a>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="pageProducts.html">
+              <div class="imgPr">
+                <img src="images/product.webp" alt="" loading="lazy" />
+              </div>
+            </a>
+            <div class="itwmPr flex flex-col justify-around h-130px items-center">
+              <div class="namePr">
+                <a href="">
+                  <h4 class="text-c4 text-base font-font-600">قميص</h4>
+                </a>
+              </div>
+              <div class="pricePr">45322ل.س</div>
+              <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+                <button class="w-wFull h-full font-font-600 text-white">
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section and 8 End -->
+    </div>
+    <!-- container slider Swpier Products end -->
+
+    <!-- bg ad and 2 start -->
+
+    <div class="items-ad h-full m-auto pt-16 items-center w-wFull flex">
+      <img src="images/bg2.webp" class="img-ad w-w95% h-60% m-auto" alt="" loading="lazy" />
+    </div>
+
+    <!-- bg ad and 2 end -->
+
+    <!-- slider Swpier product End home start -->
+
+    <div class="mySwiper">
+      <div class="item-SwpierSli">
+        <div class="titleSli">
+          <h3>جديدنا</h3>
+          <div class="hr"></div>
+        </div>
+
+        <div class="clickPrevNext">
+          <i class="bx bx-chevron-right nextSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+          <i class="bx bx-chevron-left prevSli text-c5 bg-c4 px-2 py-1 rounded-full text-xl"></i>
+        </div>
+
+        <div class="prAll">
+          <a class="text-white text-xs" href="">عرض الكل</a>
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="pageProducts.html">
+            <div class="imgPr"><img src="images/product.webp" alt="" loading="lazy" /></div>
+          </a>
+          <div class="itwmPr flex flex-col justify-around h-130px items-center">
+            <div class="namePr">
+              <a href="pageProducts.html">
+                <h4 class="text-c4 text-base font-font-600">قميص</h4>
+              </a>
+            </div>
+            <div class="pricePr">45322ل.س</div>
+            <div class="sicon-card bg-c4 p-1 rounded-xl flex relative">
+              <button class="w-wFull h-full font-font-600 text-white">
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- slider Swpier product End home end -->
+
+    <!-- Box features Elements start -->
+    <br />
+    <br />
+    <br />
+    <div class="content-features w-wFull h-fit p-3">
+      <div class="boxfeatures w-w85% h-fit flex flex-wrap justify-center m-auto gap-y-3 p-4">
+        <div class="feature-item basis-300px flex flex-col items-center gap-y-3 flex-grow p-2">
+          <div class="feature-icon w-w100 h-100px rounded-full bg-c4 flex items-center justify-center">
+            <img src="icons/icons8-truck-64.png" class="w-w60 h-60px" alt="" loading="lazy" />
+          </div>
+
+          <div class="feature-text text-center">
+            <h3 class="text-xs font-font-600 pb-2">شحن سريع</h3>
+            <p class="text-xs font-font-600">
+              بكل الحب نشحن إلى جميع مناطق سوريا
             </p>
-            <br />
-            <div class="contact-footer flex w-w200 justify-evenly">
-              <a
-                href=""
-                class="w-w75 text-white text-xs py-1 bg-black rounded-lg text-center"
-                ><span class="bx bxl-whatsapp text-sm"></span> واتساب
-              </a>
-              <a
-                href=""
-                class="w-w75 text-white text-xs py-1 bg-black rounded-lg text-center"
-                ><span class="bx bxl-gmail text-sm"></span> ايميل
-              </a>
-            </div>
           </div>
-          <div class="item-footer-2 w-w230">
-            <h4 class="block text-sm w-w-fit font-font-700 border-b-2 pb-2">
-              روابط مهمة
-            </h4>
-            <br />
-            <ul class="flex flex-wrap justify-between text-base items-center">
-              <div>
-                <li>
-                  <a
-                    href=""
-                    class="hover:bg-black hover:text-white px-2 py-1 rounded-lg"
-                    >طريقة أختيار المقاس
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    class="hover:bg-black hover:text-white px-2 py-1 rounded-lg"
-                    >سياسة الخصوصية</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href=""
-                    class="hover:bg-black hover:text-white px-2 py-1 rounded-lg"
-                    >سياسة الاستبدال ةالاسترجاع</a
-                  >
-                </li>
-              </div>
-              <div>
-                <li>
-                  <a
-                    href=""
-                    class="hover:bg-black hover:text-white px-2 py-1 rounded-lg"
-                    >الشكاوي والاقتراحات</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href=""
-                    class="hover:bg-black hover:text-white px-2 py-1 rounded-lg"
-                    >عروض خصومات</a
-                  >
-                </li>
-              </div>
-            </ul>
+        </div>
+        <div class="feature-item basis-300px flex flex-col items-center gap-y-3 flex-grow p-2">
+          <div class="feature-icon w-w100 h-100px rounded-full bg-c4 flex items-center justify-center">
+            <img src="icons/icons8-wallet-64.png" class="w-w60 h-60px" alt="" loading="lazy" />
           </div>
-          <div class="item-footer-3">
-            <h4 class="block text-sm w-w-fir font-font-700 border-b-2 pb-2">
-              تواصل معنا
-            </h4>
-            <br />
-            <div class="icon-insgram w-w-fit py-1 px-2 rounded-full bg-black">
-              <a href="" class="w-wFull"
-                ><i class="bx bxl-instagram text-3xl text-white"></i
-              ></a>
-            </div>
-          </div>
-        </footer>
-      </div>
-      <div class="footer-down w-wFull text-center p-3 text-xs font-font-700">
-        <p>جميع الحقوق محفوظة 2024 | MH.Code</p>
-      </div>
-     
-      
-    </section>
 
-    <button class="btntopscroll w-w75 h-40px bg-c4 fixed bottom-24 hidden">
-      top
-    </button>
-    <!-- <script src="../node_modules/keen-slider/keen-slider.js"></script> -->
-    <script src="
+          <div class="feature-text text-center">
+            <h3 class="text-xs font-font-600 pb-2">طرق دفع متنوعة وأمنة</h3>
+            <p class="text-xs font-font-600">
+              وفرنا كل وسائل دفع الآمنة لضمان راحتك
+            </p>
+          </div>
+        </div>
+        <div class="feature-item basis-300px flex flex-col items-center gap-y-3 flex-grow p-2">
+          <div class="feature-icon w-w100 h-100px rounded-full bg-c4 flex items-center justify-center">
+            <img src="icons/icons8-whatsapp-50.png" class="w-w60 h-60px" alt="" loading="lazy" />
+          </div>
+
+          <div class="feature-text text-center">
+            <h3 class="text-xs font-font-600 pb-2">خدمة العملاء</h3>
+            <p class="text-xs font-font-600">واتساب مخصص لخدمة العملاء</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box features Elements end -->
+    <section class="section-slider-keen">
+      <div id="my-keen-slider" class="keen-slider">
+        <div class="keen-slider__slide number-slide1">
+          <div class="card-1">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="item-card">
+              <p>
+                ohuigyftdr Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Rem excepturi
+              </p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="item-card">
+              <p>ohuigyftdr Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item-card-information">
+              <div class="img-profile">
+                <img src="images/avatar_male.png" alt="" loading="lazy" />
+              </div>
+              <div class="item-name">
+                <p>
+                  mohamed <br />
+                  <span>دمشق</span>
+                </p>
+              </div>
+              <div class="item-Assess">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-footer w-wFull py-8 h-fit bg-footer">
+      <footer style="justify-content: space-evenly" class="footer w-w85% flex flex-wrap gap-10">
+        <div class="item-footer w-w400 text-sm font-font-600">
+          <h4 class="block text-sm w-w-fit font-font-700 border-b-2 pb-2">
+            من نحن
+          </h4>
+          <br />
+          <p>
+            دور الأناقة هو أفضل موقع وسيط لبيع الملابس النسائية والأزياء بسعر
+            منخفض ، حيث يقدم بلايز فاخرة وملابس فاخرة وغير ذلك الكثير ، قوموا
+            بزيارة موقعنا على الإنترنت !!
+          </p>
+          <br />
+          <div class="contact-footer flex w-w200 justify-evenly">
+            <a href="" class="w-w75 text-white text-xs py-1 bg-black rounded-lg text-center"><span
+                class="bx bxl-whatsapp text-sm"></span> واتساب
+            </a>
+            <a href="" class="w-w75 text-white text-xs py-1 bg-black rounded-lg text-center"><span
+                class="bx bxl-gmail text-sm"></span> ايميل
+            </a>
+          </div>
+        </div>
+        <div class="item-footer-2 w-w230">
+          <h4 class="block text-sm w-w-fit font-font-700 border-b-2 pb-2">
+            روابط مهمة
+          </h4>
+          <br />
+          <ul class="flex flex-wrap justify-between text-base items-center">
+            <div>
+              <li>
+                <a href="" class="hover:bg-black hover:text-white px-2 py-1 rounded-lg">طريقة أختيار المقاس
+                </a>
+              </li>
+              <li>
+                <a href="" class="hover:bg-black hover:text-white px-2 py-1 rounded-lg">سياسة الخصوصية</a>
+              </li>
+              <li>
+                <a href="" class="hover:bg-black hover:text-white px-2 py-1 rounded-lg">سياسة الاستبدال ةالاسترجاع</a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <a href="" class="hover:bg-black hover:text-white px-2 py-1 rounded-lg">الشكاوي والاقتراحات</a>
+              </li>
+              <li>
+                <a href="" class="hover:bg-black hover:text-white px-2 py-1 rounded-lg">عروض خصومات</a>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div class="item-footer-3">
+          <h4 class="block text-sm w-w-fir font-font-700 border-b-2 pb-2">
+            تواصل معنا
+          </h4>
+          <br />
+          <div class="icon-insgram w-w-fit py-1 px-2 rounded-full bg-black">
+            <a href="" class="w-wFull"><i class="bx bxl-instagram text-3xl text-white"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="footer-down w-wFull text-center p-3 text-xs font-font-700">
+      <p>جميع الحقوق محفوظة 2024 | MH.Code</p>
+    </div>
+
+
+  </section>
+
+  <button class="btntopscroll w-w75 h-40px bg-c4 fixed bottom-24 hidden">
+    top
+  </button>
+  <!-- <script src="../node_modules/keen-slider/keen-slider.js"></script> -->
+  <script src="
     https://cdn.jsdelivr.net/npm/@loveholidays/keen-slider@5.2.2/keen-slider.min.js
     "></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="scripts/sliderSWP.js"></script>
-    <script src="scripts/keen-slider.js"></script>
+  <script src="scripts/sliderSWP.js"></script>
+  <script src="scripts/keen-slider.js"></script>
 
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> 
-     <script type="text/javascript" src="app.js"></script>
-  </body>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
 </html>
